@@ -75,7 +75,9 @@ export default function HomePage() {
               以在地市場洞察為根基，為客戶規劃資產配置、稅務與居住美學的整體方案——不只是幫您買賣房子，更是您長期信賴的不動產顧問。
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" href="/card/booking">線上預約諮詢</Link>
+              <a className="btn btn-primary" href={PROFILE.social.line} target="_blank" rel="noreferrer">
+                加 LINE 免費諮詢
+              </a>
               <a className="btn btn-outline" href={`tel:${PROFILE.phoneRaw}`}>📞 {PROFILE.phone}</a>
             </div>
           </div>
@@ -199,12 +201,22 @@ export default function HomePage() {
         </div>
         <div className="container booking-wrap">
           <div className="booking-form">
-            <h3 className="booking-lead">線上預約諮詢時段</h3>
+            <h3 className="booking-lead">加 LINE 直接諮詢</h3>
             <p className="booking-lead-text">
-              選擇日期與時段、填寫您的需求，送出後我會盡快與您確認。全程約一分鐘完成。
+              最快也最確實的聯繫方式。加我 LINE 後直接說明您的需求，我會親自回覆，並與您約定方便的時間。
             </p>
-            <Link className="btn btn-primary booking-cta" href="/card/booking">前往預約系統</Link>
-            <p className="form-note">也可以先看看我的電子名片：<Link href="/card">{PROFILE.name} 電子名片</Link></p>
+            <a
+              className="btn btn-primary booking-cta"
+              href={PROFILE.social.line}
+              target="_blank"
+              rel="noreferrer"
+            >
+              加 LINE 好友（{PROFILE.lineId}）
+            </a>
+            <p className="form-note">
+              想先看看可預約的時段？<Link href="/card/booking">線上預約系統</Link>
+              　·　<Link href="/card">我的電子名片</Link>
+            </p>
           </div>
 
           <aside className="contact-card">
