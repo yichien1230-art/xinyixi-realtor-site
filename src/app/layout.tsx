@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const TITLE = "辛沂茜｜高雄鼓山・左營・三民 永義房屋房地產財富顧問";
+const TITLE = "辛沂茜 茜茜老蘇｜高雄房仲・鼓山左營三民・永義房屋";
 const DESCRIPTION =
-  "辛沂茜，永義房屋114年度標竿獎得主，專精高雄農十六、凹子底、美術館特區、高鐵特區、巨蛋特區、生態園區，提供資產配置規劃、不動產稅務諮詢、簡易裝潢建議。加LINE免費諮詢：zefira1230。";
+  "高雄房仲茜茜老蘇（辛沂茜），永義房屋114年度標竿獎得主，專精高雄農十六、凹子底、美術館特區、高鐵特區、巨蛋特區、生態園區，提供資產配置規劃、不動產稅務諮詢、簡易裝潢建議。加LINE免費諮詢：zefira1230。";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords: [
+    "茜茜老蘇",
+    "房仲老蘇",
     "農十六",
     "凹子底",
     "美術館特區",

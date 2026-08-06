@@ -68,9 +68,9 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-inner">
           <div>
-            <span className="hero-kicker">🏆 {PROFILE.award}｜高雄房地產財富顧問</span>
+            <span className="hero-kicker">🏆 {PROFILE.award}</span>
             <h1>{PROFILE.name}</h1>
-            <div className="hero-title">{PROFILE.title}｜高雄鼓山・左營・三民區</div>
+            <div className="hero-title">{PROFILE.title}｜永義房屋・鼓山・左營・三民區</div>
             <p className="hero-desc">
               以在地市場洞察為根基，為客戶規劃資產配置、稅務與居住美學的整體方案——不只是幫您買賣房子，更是您長期信賴的不動產顧問。
             </p>
