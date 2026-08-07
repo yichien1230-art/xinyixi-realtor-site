@@ -113,9 +113,9 @@
   /* ---------- Hero ---------- */
   .hero {
     background:
-      radial-gradient(circle at 85% -10%, rgba(249,190,0,0.28), transparent 55%),
-      linear-gradient(160deg, var(--yongyi-gray), #3f3d3a);
-    color: #fff;
+      radial-gradient(circle at 88% -15%, rgba(255,255,255,0.45), transparent 58%),
+      linear-gradient(160deg, var(--yongyi-yellow), #f2b200);
+    color: var(--ink);
     padding: 64px 0 72px;
   }
 
@@ -130,9 +130,9 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(249,190,0,0.16);
-    border: 1px solid rgba(249,190,0,0.5);
-    color: var(--yongyi-yellow);
+    background: var(--yongyi-white);
+    border: 1px solid rgba(43,41,38,0.14);
+    color: var(--ink);
     padding: 6px 14px;
     border-radius: 999px;
     font-weight: 800;
@@ -154,14 +154,14 @@
 
   .hero .hero-title {
     margin-top: 10px;
-    color: var(--yongyi-yellow);
+    color: var(--yongyi-gray);
     font-weight: 800;
     font-size: 18px;
   }
 
   .hero p.hero-desc {
     margin-top: 16px;
-    color: #dedbd3;
+    color: #4a4741;
     font-size: 16px;
     max-width: 52ch;
   }
@@ -192,11 +192,11 @@
   .btn-primary:hover { background: #007d43; }
 
   .btn-outline {
-    background: transparent;
-    border-color: rgba(255,255,255,0.5);
-    color: #fff;
+    background: var(--yongyi-white);
+    border-color: var(--yongyi-white);
+    color: var(--ink);
   }
-  .btn-outline:hover { border-color: var(--yongyi-yellow); color: var(--yongyi-yellow); }
+  .btn-outline:hover { border-color: var(--yongyi-gray); color: var(--yongyi-gray); }
 
   .hero-portrait-wrap {
     display: flex;
@@ -207,8 +207,8 @@
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    border: 6px solid var(--yongyi-yellow);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    border: 6px solid var(--yongyi-white);
+    box-shadow: 0 20px 50px rgba(90,87,82,0.35);
     object-fit: cover;
     object-position: center 22%;
   }
