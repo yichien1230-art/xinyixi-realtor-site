@@ -42,12 +42,6 @@ const SERVICES = [
   }
 ];
 
-const INSIGHTS = [
-  { icon: "📊", title: "農十六・凹子底・美術館特區", text: "鼓山三大特區行情分析，文章準備中。" },
-  { icon: "📈", title: "高鐵・巨蛋・生態園區", text: "左營重劃區推案與增值趨勢，文章準備中。" },
-  { icon: "🏠", title: "三民區生活圈趨勢", text: "文章準備中，敬請期待。" }
-];
-
 export default function HomePage() {
   return (
     <div className="lp">
@@ -58,7 +52,6 @@ export default function HomePage() {
             <a href="#area">專業服務</a>
             <a href="#achieve">戰績</a>
             <a href="#services">服務項目</a>
-            <a href="#insights">市場觀點</a>
             <a href="#booking">預約諮詢</a>
           </nav>
           <a className="nav-cta" href="#booking">免費諮詢</a>
@@ -169,23 +162,6 @@ export default function HomePage() {
               <div className="service-num">{service.num}</div>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="insights" className="area-section">
-        <div className="container section-head">
-          <span className="section-tag">Market Insights</span>
-          <h2 className="section-title">市場觀點</h2>
-          <p className="section-sub">定期發布高雄鼓山、左營、三民區的深度市場分析，陸續上線中。</p>
-        </div>
-        <div className="container area-grid">
-          {INSIGHTS.map((item) => (
-            <div className="area-card insight-card" key={item.title}>
-              <div className="area-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
             </div>
           ))}
         </div>
