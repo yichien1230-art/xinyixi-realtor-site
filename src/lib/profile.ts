@@ -9,6 +9,11 @@ export const PROFILE = {
   serviceArea: "高雄市鼓山區・左營區・三民區",
   photoUrl: "/card/xinyixi.jpg",
   social: {
-    line: "https://line.me/ti/p/~zefira1230"
+    line: "https://line.me/ti/p/~zefira1230",
+    // 由茜茜提供的分享連結解析出的正式網址（分享連結會過期，不直接使用）
+    facebook: "https://www.facebook.com/profile.php?id=100085056948470",
+    tiktok: "https://www.tiktok.com/@hsin_chien"
+    // instagram: 尚未取得。茜茜給的是 instagram.com 首頁，沒有帳號名稱，
+    // 拿到正確的個人頁網址再補上，不要用猜的。
   }
 } as const;

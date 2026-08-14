@@ -52,7 +52,7 @@ export default function HomePage() {
             <a href="#area">專業服務</a>
             <a href="#achieve">戰績</a>
             <a href="#services">服務項目</a>
-            <a href="#booking">預約諮詢</a>
+            <a href="#booking">聯絡我</a>
           </nav>
           <a className="nav-cta" href="#booking">免費諮詢</a>
         </div>
@@ -68,10 +68,10 @@ export default function HomePage() {
               以在地市場洞察為根基，為客戶規劃資產配置、稅務與居住美學的整體方案——不只是幫您買賣房子，更是您長期信賴的不動產顧問。
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" href="/card/booking">線上預約諮詢</Link>
-              <a className="btn btn-outline" href={PROFILE.social.line} target="_blank" rel="noreferrer">
-                加 LINE 諮詢
+              <a className="btn btn-primary" href={PROFILE.social.line} target="_blank" rel="noreferrer">
+                加 LINE 免費諮詢
               </a>
+              <a className="btn btn-outline" href={`tel:${PROFILE.phoneRaw}`}>📞 {PROFILE.phone}</a>
             </div>
           </div>
           <div className="hero-portrait-wrap">
@@ -131,23 +131,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="testimonials" className="services-section">
-        <div className="container section-head">
-          <span className="section-tag">Client Voice</span>
-          <h2 className="section-title">客戶好評見證</h2>
-          <p className="section-sub">真實成交客戶的回饋，是最有力的專業佐證——此區塊保留給日後上線的真實見證。</p>
-        </div>
-        <div className="container service-grid">
-          {["01", "02", "03"].map((n) => (
-            <div className="service-card testimonial-placeholder" key={n}>
-              <div className="service-num">見證 {n}</div>
-              <h3>敬請期待</h3>
-              <p>客戶好評整理中，歡迎日後提供真實回饋文字或截圖，我會協助上架。</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="services" className="services-section">
         <div className="container section-head">
           <span className="section-tag">Value-Added Services</span>
@@ -169,35 +152,69 @@ export default function HomePage() {
 
       <section id="booking" className="booking-section">
         <div className="container section-head">
-          <span className="section-tag">Booking</span>
-          <h2 className="section-title">預約一對一專業諮詢</h2>
+          <span className="section-tag">Contact</span>
+          <h2 className="section-title">免費諮詢</h2>
           <p className="section-sub">
-            由永義房屋114年度標竿獎得主親自為您規劃。線上挑選方便的時段，或直接加 LINE 詢問都可以。
+            買房賣房、資產配置、稅務問題，歡迎直接找我聊聊。用您方便的方式聯絡即可。
           </p>
         </div>
         <div className="container booking-wrap">
           <div className="booking-form">
-            <h3 className="booking-lead">線上預約諮詢時段</h3>
+            <h3 className="booking-lead">加 LINE 直接諮詢</h3>
             <p className="booking-lead-text">
-              選擇您方便的日期與時段、填寫需求，送出後我會盡快與您確認。全程約一分鐘完成。
+              最快也最確實的聯繫方式。加我 LINE 後直接說明您的需求，我會親自回覆，並與您約定方便的時間。
             </p>
-            <Link className="btn btn-primary booking-cta" href="/card/booking">
-              前往預約系統
-            </Link>
+            <a
+              className="btn btn-primary booking-cta"
+              href={PROFILE.social.line}
+              target="_blank"
+              rel="noreferrer"
+            >
+              加 LINE 好友（{PROFILE.lineId}）
+            </a>
+            <a className="btn btn-phone booking-cta" href={`tel:${PROFILE.phoneRaw}`}>
+              📞 直接來電 {PROFILE.phone}
+            </a>
             <p className="form-note">
-              也可以直接加 LINE：
-              <a href={PROFILE.social.line} target="_blank" rel="noreferrer">{PROFILE.lineId}</a>
-              　·　<Link href="/card">我的電子名片</Link>
+              也可以看看我的<Link href="/card">電子名片</Link>
             </p>
           </div>
 
           <aside className="contact-card">
-            <h3>直接聯繫{PROFILE.name}</h3>
-            <p>高雄鼓山・左營・三民區在地房仲，歡迎隨時洽詢。</p>
+            <h3>追蹤{PROFILE.name}</h3>
+            <p>看物件實拍、成交分享與高雄在地房市觀察。</p>
+            <div className="social-grid">
+              <a
+                className="social-btn social-fb"
+                href={PROFILE.social.facebook}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="social-icon">f</span>
+                <span>Facebook</span>
+              </a>
+              <a
+                className="social-btn social-tiktok"
+                href={PROFILE.social.tiktok}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="social-icon">♪</span>
+                <span>抖音 TikTok</span>
+              </a>
+              <a
+                className="social-btn social-line"
+                href={PROFILE.social.line}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="social-icon">L</span>
+                <span>LINE</span>
+              </a>
+            </div>
             <div className="contact-line"><span className="sym">T</span>{PROFILE.phone}</div>
             <div className="contact-line"><span className="sym">L</span>LINE ID：{PROFILE.lineId}</div>
             <div className="contact-line"><span className="sym">A</span>服務區域：{PROFILE.serviceArea}</div>
-            <a className="btn btn-primary" href={PROFILE.social.line} target="_blank" rel="noreferrer">加 LINE 好友</a>
           </aside>
         </div>
       </section>

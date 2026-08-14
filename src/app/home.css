@@ -473,6 +473,58 @@
     font-size: 16px;
   }
 
+  .btn-phone {
+    margin-top: 10px;
+    background: var(--yongyi-white);
+    border-color: var(--line);
+    color: var(--ink);
+  }
+
+  .btn-phone:hover { border-color: var(--yongyi-gray); }
+
+  /* ---------- 社群按鈕 ---------- */
+  .social-grid {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .social-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  .social-fb .social-icon { background: #1877F2; }
+  .social-tiktok .social-icon { background: #010101; }
+  .social-line .social-icon { background: #06C755; }
+
   .lp .field { margin-bottom: 18px; }
 
   .lp .field label {
