@@ -194,6 +194,15 @@ export default function HomePage() {
                 <span>Facebook</span>
               </a>
               <a
+                className="social-btn social-ig"
+                href={PROFILE.social.instagram}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="social-icon">◎</span>
+                <span>Instagram</span>
+              </a>
+              <a
                 className="social-btn social-tiktok"
                 href={PROFILE.social.tiktok}
                 target="_blank"
