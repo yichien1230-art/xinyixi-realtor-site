@@ -7,6 +7,8 @@ export const PROFILE = {
   phoneRaw: "0930095388",
   lineId: "zefira1230",
   serviceArea: "高雄市鼓山區・左營區・三民區",
+  latinName: "HSIN YI-CHIEN",
+  store: "永義房屋｜高雄大順龍華店",
   photoUrl: "/card/xinyixi.jpg",
   social: {
     line: "https://line.me/ti/p/~zefira1230",

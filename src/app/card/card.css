@@ -1,0 +1,309 @@
+/*
+ * 電子名片 —— 這是實際傳給客戶的頁面，以手機直式瀏覽為主。
+ * 視覺參考睿豐團隊主視覺：米白底、香檳金、墨黑，留白多、線條細。
+ * 全部限縮在 .vcard 之下，不影響首頁與其他頁面。
+ */
+
+.vcard {
+  --gold: #C9A961;
+  --gold-deep: #A8823C;
+  --gold-light: #E4CF9B;
+  --cream: #F7F2E8;
+  --cream-deep: #EFE7D7;
+  --ink: #1F1D1A;
+  --ink-soft: #6E675C;
+  --line-soft: #E3D9C4;
+  --line-green: #06C755;
+
+  min-height: 100vh;
+  padding: 28px 16px 40px;
+  background:
+    radial-gradient(circle at 50% 0%, #FFFDF8, transparent 45%),
+    linear-gradient(170deg, var(--cream), var(--cream-deep));
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  color: var(--ink);
+}
+
+.vcard *,
+.vcard *::before,
+.vcard *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.vcard a { text-decoration: none; color: inherit; }
+
+.vcard-inner {
+  width: min(440px, 100%);
+  margin: 0 auto;
+  background: #FFFDF9;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(70, 58, 34, 0.14);
+  overflow: hidden;
+}
+
+/* ---------- 頂部金色弧形 ---------- */
+.vcard-crown {
+  position: relative;
+  height: 132px;
+  background: linear-gradient(135deg, #2A2622, #14120F);
+  overflow: hidden;
+}
+
+.vcard-crown::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -95px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, var(--gold-light), var(--gold) 45%, var(--gold-deep));
+  opacity: 0.9;
+}
+
+.vcard-brandline {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  z-index: 2;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* ---------- 大頭照 ---------- */
+.vcard-portrait-wrap {
+  margin-top: -66px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+
+.vcard-portrait {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 4px solid #FFFDF9;
+  box-shadow:
+    0 0 0 1px var(--gold),
+    0 14px 30px rgba(70, 58, 34, 0.26);
+}
+
+/* ---------- 姓名區 ---------- */
+.vcard-head {
+  padding: 18px 28px 0;
+  text-align: center;
+}
+
+.vcard-name {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-indent: 6px;
+  line-height: 1.2;
+}
+
+.vcard-latin {
+  margin-top: 7px;
+  color: var(--gold-deep);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.vcard-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px auto 0;
+  width: 74%;
+}
+
+.vcard-rule span {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--line-soft), transparent);
+}
+
+.vcard-rule i {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  transform: rotate(45deg);
+  background: var(--gold);
+}
+
+.vcard-role {
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--ink);
+}
+
+.vcard-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  padding: 7px 17px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #FBF3DE, #F1E2BC);
+  border: 1px solid var(--gold);
+  color: #6E5312;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.vcard-slogan {
+  margin: 16px 4px 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.95;
+}
+
+/* ---------- 行動按鈕 ---------- */
+.vcard-actions {
+  padding: 24px 28px 4px;
+  display: grid;
+  gap: 11px;
+}
+
+.vcard-btn {
+  min-height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 15.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.vcard-btn:active { transform: scale(0.985); }
+
+.vcard-btn-line {
+  background: var(--line-green);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(6, 199, 85, 0.28);
+}
+
+.vcard-btn-tel {
+  background: #fff;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.vcard-btn-tel:hover { background: var(--cream); }
+
+/* ---------- 聯絡資訊 ---------- */
+.vcard-info {
+  margin: 24px 28px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  gap: 15px;
+}
+
+.vcard-row {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.vcard-row-key {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--gold-light), var(--gold));
+  color: #4A380F;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* ---------- 社群 ---------- */
+.vcard-social {
+  margin: 22px 28px 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.vcard-social a {
+  min-height: 60px;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  padding: 9px 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.vcard-social a:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+.vcard-social-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.icon-fb { background: #1877F2; }
+.icon-ig { background: linear-gradient(45deg, #F58529, #DD2A7B 50%, #8134AF 85%, #515BD4); }
+.icon-tt { background: #010101; }
+
+/* ---------- 底部品牌帶 ---------- */
+.vcard-foot {
+  margin-top: 26px;
+  padding: 17px 28px;
+  background: linear-gradient(135deg, #2A2622, #14120F);
+  text-align: center;
+}
+
+.vcard-foot-store {
+  color: var(--gold-light);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.vcard-foot-area {
+  margin-top: 5px;
+  color: #9A9186;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 400px) {
+  .vcard { padding: 18px 12px 30px; }
+  .vcard-name { font-size: 26px; letter-spacing: 4px; text-indent: 4px; }
+  .vcard-head { padding: 16px 20px 0; }
+  .vcard-actions { padding: 20px 20px 4px; }
+  .vcard-info,
+  .vcard-social { margin-left: 20px; margin-right: 20px; }
+  .vcard-foot { padding: 15px 20px; }
+}
