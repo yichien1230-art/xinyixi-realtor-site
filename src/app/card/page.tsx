@@ -71,6 +71,7 @@ export default function CardPage() {
           <InfoRow label="T" value={PROFILE.phone} href={`tel:${PROFILE.phoneRaw}`} />
           <InfoRow label="L" value={`LINE ID：${PROFILE.lineId}`} href={PROFILE.social.line} />
           <InfoRow label="A" value={PROFILE.serviceArea} />
+          <InfoRow label="W" value="查看官方網站" href="/" />
         </div>
 
         <div className="vcard-social">
