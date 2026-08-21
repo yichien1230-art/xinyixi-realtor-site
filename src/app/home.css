@@ -376,6 +376,48 @@ html { scroll-behavior: smooth; }
 .achieve-section .section-title { color: #fff; }
 .achieve-section .section-sub { color: #B5ADA1; }
 
+/* 得獎照片 */
+.award-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+  max-width: 940px;
+  margin: 0 auto 40px;
+}
+
+.award-photo {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(201, 169, 97, 0.42);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/*
+ * 完整顯示不裁切：領獎照的證據在大螢幕上的獎項名稱，
+ * 用 object-fit: cover 會把它切掉。
+ */
+.award-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.award-photo figcaption {
+  padding: 13px 16px;
+  color: var(--gold-light);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 169, 97, 0.28);
+}
+
+@media (max-width: 780px) {
+  .award-photos { grid-template-columns: 1fr; }
+}
+
 .award-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

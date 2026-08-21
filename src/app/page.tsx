@@ -116,6 +116,27 @@ export default function HomePage() {
           <p className="section-sub">用實績說話，陪每一位客戶把不動產決定做到位。</p>
         </div>
         <div className="container">
+          <div className="award-photos">
+            <figure className="award-photo">
+              <Image
+                src="/images/award-stage.jpg"
+                width={1567}
+                height={1045}
+                alt="辛沂茜於永義房屋115年高雄區第二季頒獎典禮上台領取菁英獎 TOP 18"
+              />
+              <figcaption>115 年高雄區第二季頒獎典禮　菁英獎 TOP 18 頒獎現場</figcaption>
+            </figure>
+            <figure className="award-photo">
+              <Image
+                src="/images/award-team.jpg"
+                width={1477}
+                height={1108}
+                alt="辛沂茜與永義房屋高雄大順龍華店同仁於頒獎典禮合影"
+              />
+              <figcaption>永義房屋　高雄大順龍華店　團隊合影</figcaption>
+            </figure>
+          </div>
+
           <div className="award-grid">
             {PROFILE.awards.map((a) => (
               <div className="achieve-badge" key={a.short}>
