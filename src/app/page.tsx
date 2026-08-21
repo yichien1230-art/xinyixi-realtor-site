@@ -61,7 +61,7 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-inner">
           <div>
-            <span className="hero-kicker">🏆 {PROFILE.award}</span>
+            <span className="hero-kicker">🏆 {PROFILE.awards[0].short}</span>
             <h1>{PROFILE.name}</h1>
             <div className="hero-title">{PROFILE.title}｜永義房屋・鼓山・左營・三民區</div>
             <p className="hero-desc">
@@ -116,11 +116,15 @@ export default function HomePage() {
           <p className="section-sub">用實績說話，陪每一位客戶把不動產決定做到位。</p>
         </div>
         <div className="container">
-          <div className="achieve-badge">
-            <div className="medal">🏆</div>
-            <div className="year">114 年度</div>
-            <h3>永義房屋 年度標竿獎</h3>
-            <p>感謝客戶的信任，持續以專業與誠信服務高雄在地房產需求。</p>
+          <div className="award-grid">
+            {PROFILE.awards.map((a) => (
+              <div className="achieve-badge" key={a.short}>
+                <div className="medal">🏆</div>
+                <div className="year">{a.year}</div>
+                <h3>{a.title}</h3>
+                <p>{a.note}</p>
+              </div>
+            ))}
           </div>
           <div className="trust-row">
             <div className="trust-item"><strong>累計成交總額</strong><span>資料更新中</span></div>
@@ -230,7 +234,7 @@ export default function HomePage() {
 
       <footer>
         <div className="container">
-          &copy; 2026 <strong>{PROFILE.name}</strong>｜永義房屋・高雄鼓山左營三民區｜{PROFILE.award}
+          &copy; 2026 <strong>{PROFILE.name}</strong>｜{PROFILE.store}・高雄鼓山左營三民區
         </div>
       </footer>
 

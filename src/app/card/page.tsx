@@ -49,7 +49,11 @@ export default function CardPage() {
           </div>
 
           <div className="vcard-role">{PROFILE.title}</div>
-          <div className="vcard-award">🏆 {PROFILE.award}</div>
+          <div className="vcard-awards">
+            {PROFILE.awards.map((a) => (
+              <div className="vcard-award" key={a.short}>🏆 {a.short}</div>
+            ))}
+          </div>
           <p className="vcard-slogan">{PROFILE.slogan}</p>
         </div>
 

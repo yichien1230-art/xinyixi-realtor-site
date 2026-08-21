@@ -3,7 +3,7 @@ import "./globals.css";
 
 const TITLE = "辛沂茜 茜茜老蘇｜高雄房仲・鼓山左營三民・永義房屋";
 const DESCRIPTION =
-  "高雄房仲茜茜老蘇（辛沂茜），永義房屋114年度標竿獎得主，專精高雄農十六、凹子底、美術館特區、高鐵特區、巨蛋特區、生態園區，提供資產配置規劃、不動產稅務諮詢、簡易裝潢建議。加LINE免費諮詢：zefira1230。";
+  "高雄房仲茜茜老蘇（辛沂茜），永義房屋115年高雄區第二季菁英獎TOP18、114年度標竿獎得主，專精高雄農十六、凹子底、美術館特區、高鐵特區、巨蛋特區、生態園區，提供資產配置規劃、不動產稅務諮詢、簡易裝潢建議。加LINE免費諮詢：zefira1230。";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -63,7 +63,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 { "@type": "AdministrativeArea", name: "高雄市左營區" },
                 { "@type": "AdministrativeArea", name: "高雄市三民區" }
               ],
-              award: "114年永義房屋年度標竿獎",
+              award: [
+                "115年永義房屋高雄區第二季菁英獎 TOP 18",
+                "114年永義房屋年度標竿獎"
+              ],
               makesOffer: [
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "資產配置規劃" } },
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "不動產稅務諮詢" } },
