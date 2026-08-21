@@ -28,7 +28,7 @@
 .vcard *::before,
 .vcard *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.vcard a { text-decoration: none; color: inherit; }
+:where(.vcard a) { text-decoration: none; color: inherit; }
 
 .vcard-inner {
   width: min(440px, 100%);

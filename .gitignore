@@ -14,3 +14,6 @@ data/outbox/
 .DS_Store
 Thumbs.db
 npm-debug.log*
+
+# 改版前的樣式備份，不進版控
+*.bak
